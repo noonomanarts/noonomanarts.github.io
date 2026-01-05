@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>noon</title>
+    <meta
+      name="description"
+      content="Noon Oman Arts"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="noon" />
+    <meta property="og:description" content="Noon Oman Arts" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="icon-512x512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="noon" />
+    <meta name="twitter:description" content="Noon Oman Arts" />
+    <meta name="twitter:image" content="icon-512x512.png" />
+    <link rel="icon" href="icon-512x512.png" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Noto+Kufi+Arabic:wght@300;500;700&display=swap");
+
+      :root {
+        --ink: #141618;
+        --muted: #6b6f76;
+        --panel: #f7f4ee;
+        --accent: #d0a86b;
+        --bg-1: #efe6d6;
+        --bg-2: #f8f2e9;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 600px at 10% 10%, rgba(208, 168, 107, 0.15), transparent 60%),
+          radial-gradient(1000px 700px at 90% 20%, rgba(20, 22, 24, 0.08), transparent 55%),
+          linear-gradient(135deg, var(--bg-1), var(--bg-2));
+        font-family: "Manrope", system-ui, sans-serif;
+      }
+
+      .frame {
+        width: min(900px, 92vw);
+        background: rgba(255, 255, 255, 0.65);
+        border: 1px solid rgba(20, 22, 24, 0.08);
+        border-radius: 28px;
+        padding: clamp(24px, 4vw, 48px);
+        box-shadow: 0 30px 80px rgba(20, 22, 24, 0.12);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .frame::before,
+      .frame::after {
+        content: "";
+        position: absolute;
+        border-radius: 999px;
+        opacity: 0.12;
+        background: var(--accent);
+      }
+
+      .frame::before {
+        width: 220px;
+        height: 220px;
+        top: -80px;
+        right: -60px;
+      }
+
+      .frame::after {
+        width: 180px;
+        height: 180px;
+        bottom: -70px;
+        left: -40px;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: clamp(20px, 3vw, 32px);
+        position: relative;
+        z-index: 1;
+      }
+
+      .logo {
+        width: clamp(52px, 8vw, 72px);
+        height: clamp(52px, 8vw, 72px);
+        border-radius: 18px;
+        box-shadow: 0 14px 30px rgba(20, 22, 24, 0.15);
+        background: #fff;
+        padding: 10px;
+      }
+
+      .brand {
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .panel {
+        position: relative;
+        border-radius: 22px;
+        background: var(--panel);
+        padding: clamp(22px, 4vw, 40px);
+        z-index: 1;
+        display: grid;
+        gap: 20px;
+      }
+
+      .line h1 {
+        margin: 0 0 12px;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        line-height: 1.2;
+      }
+
+      .line p {
+        margin: 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 2.2vw, 1.2rem);
+      }
+
+      .line.ar {
+        font-family: "Noto Kufi Arabic", "Manrope", sans-serif;
+        direction: rtl;
+        text-align: right;
+      }
+
+      @media (max-width: 640px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .logo {
+          border-radius: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <div class="header">
+        <img class="logo" src="icon-512x512.png" alt="Logo" />
+        <div class="brand">Noonoman Arts</div>
+      </div>
+
+      <section class="panel">
+        <article class="line ar">
+          <h1>نحن في طور التصميم</h1>
+          <p>نعمل على تجربة أنيقة وبسيطة. ترقبوا الإطلاق قريبًا.</p>
+        </article>
+        <article class="line en">
+          <h1>We are designing</h1>
+          <p>Crafting a refined and minimal experience. Launching soon.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
